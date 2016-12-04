@@ -140,15 +140,15 @@ public class ReactNativeAudioStreamingModule extends ReactContextBaseJavaModule 
 
     @ReactMethod
     public void seekTo(int newPosition) {
-        try {
-            if (this.mMediaPlayer != null) {
-                this.mMediaPlayer.seekTo(newPosition);
-            }
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        } finally {
-            this.mState = BUFFERING;
-        }
+//        try {
+//            if (this.mMediaPlayer != null) {
+//                this.mMediaPlayer.seekTo(newPosition);
+//            }
+//        } catch (Exception ex) {
+//            ex.printStackTrace();
+//        } finally {
+//            this.mState = BUFFERING;
+//        }
     }
 
     @ReactMethod
