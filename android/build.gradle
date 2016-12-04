@@ -21,6 +21,7 @@ android {
 
 dependencies {
     compile 'com.facebook.react:react-native:0.20.+'
+    compile 'com.github.wseemann:FFmpegMediaMetadataRetriever:1.0.14'
     compile files('libs/aacdecoder-android-0.8.jar')
 }
   

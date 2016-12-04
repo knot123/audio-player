@@ -3,11 +3,6 @@
           package="com.audioStreaming">
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <application
-        android:allowBackup="true">
-        <service
-            android:name="com.audioStreaming.Signal"
-            android:enabled="true"
-            android:theme="@android:style/Theme.NoTitleBar"/>
-    </application>
+        android:allowBackup="true"></application>
 </manifest>
   
