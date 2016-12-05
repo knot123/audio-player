@@ -22,6 +22,7 @@ public class ReactNativeAudioStreamingModule extends ReactContextBaseJavaModule 
     private static final String PARAM_DISPLAY_NOTIFICATION = "showInAndroidNotifications";
 
     private static final String BUFFERING = "BUFFERING";
+    private static final String COMPLETED = "COMPLETED";
     private static final String PAUSED = "PAUSED";
     private static final String PLAYING = "PLAYING";
     private static final String STOPPED = "STOPPED";
@@ -102,6 +103,12 @@ public class ReactNativeAudioStreamingModule extends ReactContextBaseJavaModule 
             @Override
             public void onPrepared(MediaPlayer mediaPlayer) {
                 ReactNativeAudioStreamingModule.this.resume();
+            }
+        });
+        this.mMediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mediaPlayer) {
+                ReactNativeAudioStreamingModule.this.mState = COMPLETED;
             }
         });
     }
