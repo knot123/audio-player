@@ -10,7 +10,7 @@ import {
     Platform
 } from 'react-native';
 
-const { ReactNativeAudioStreaming } = NativeModules;
+const { ReactNativeAudioPlayer } = NativeModules;
 
 // Possibles states
 const PLAYING = 'PLAYING';
@@ -48,7 +48,7 @@ class Player extends Component {
             }
         );
 
-        ReactNativeAudioStreaming.getStatus((error, status) => {
+        ReactNativeAudioPlayer.getStatus((error, status) => {
             (error) ? console.log(error) : this.setState(status)
         });
     }
@@ -57,17 +57,17 @@ class Player extends Component {
         switch (this.state.status) {
             case PLAYING:
             case STREAMING:
-                ReactNativeAudioStreaming.pause();
+                ReactNativeAudioPlayer.pause();
                 break;
             case PAUSED:
-                ReactNativeAudioStreaming.resume();
+                ReactNativeAudioPlayer.resume();
                 break;
             case STOPPED:
             case ERROR:
-                ReactNativeAudioStreaming.play(this.props.url, {showIniOSMediaCenter: true, showInAndroidNotifications: true});
+                ReactNativeAudioPlayer.play(this.props.url, {showIniOSMediaCenter: true, showInAndroidNotifications: true});
                 break;
             case BUFFERING:
-                ReactNativeAudioStreaming.stop();
+                ReactNativeAudioPlayer.stop();
                 break;
         }
     }
@@ -152,4 +152,4 @@ Player.propTypes = {
     url: React.PropTypes.string.isRequired
 };
 
-export { Player, ReactNativeAudioStreaming }
+export { Player, ReactNativeAudioPlayer }
