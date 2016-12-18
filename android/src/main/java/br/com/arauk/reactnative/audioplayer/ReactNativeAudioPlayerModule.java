@@ -203,7 +203,7 @@ public class ReactNativeAudioPlayerModule extends ReactContextBaseJavaModule {
     public void getStatus(Callback callback) {
         WritableMap state = Arguments.createMap();
         state.putString("status", this.getState());
-        state.putInt("duration", this.mDuration / 1000);
+        state.putInt("duration", this.mMediaPlayer.getDuration() / 1000);
         state.putInt("progress", this.mMediaPlayer.getCurrentPosition() / 1000);
         callback.invoke(null, state);
     }
