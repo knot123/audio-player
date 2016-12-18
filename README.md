@@ -1,5 +1,5 @@
 
-# react-native-audio-player
+# react-native-ark-audio-player
 
 ## Features
 
@@ -8,20 +8,20 @@
 - Shoutcast/Icy meta data support
 - Simple UI player component (if needed, an api to control the sound is available)
 
-If you are only looking to play local audio file with app in foreground, please [see other audio libs](https://github.com/tlenclos/react-native-audio-player/blob/master/README.md#other-rn-audio-projects).
+If you are only looking to play local audio file with app in foreground, please [see other audio libs](https://github.com/tlenclos/react-native-ark-audio-player/blob/master/README.md#other-rn-audio-projects).
 
-![Demo iOS](https://raw.githubusercontent.com/tlenclos/react-native-audio-player/master/demo_ios.gif)
-![Demo android](https://raw.githubusercontent.com/tlenclos/react-native-audio-player/master/demo_android.gif)
+![Demo iOS](https://raw.githubusercontent.com/tlenclos/react-native-ark-audio-player/master/demo_ios.gif)
+![Demo android](https://raw.githubusercontent.com/tlenclos/react-native-ark-audio-player/master/demo_android.gif)
 
 ## Getting started
 
-`$ npm install react-native-audio-player --save`
+`$ npm install react-native-ark-audio-player --save`
 
 ### Mostly automatic installation
 
-`$ react-native link react-native-audio-player`
+`$ react-native link react-native-ark-audio-player`
 
-Go to `node_modules` ➜ `react-native-audio-player` => `Pods` and drag/drop `Pods.xcodeproj` to the Libraries folder in your XCode project.
+Go to `node_modules` ➜ `react-native-ark-audio-player` => `Pods` and drag/drop `Pods.xcodeproj` to the Libraries folder in your XCode project.
 
 In XCode, in the project navigator, select your project. Add `libReactNativeAudioPlayer.a` and `libStreamingKit.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
 
@@ -30,7 +30,7 @@ In XCode, in the project navigator, select your project. Add `libReactNativeAudi
 #### iOS
 
 1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-2. Go to `node_modules` ➜ `react-native-audio-player` => `ios`
+2. Go to `node_modules` ➜ `react-native-ark-audio-player` => `ios`
    - run `pod install` to download StreamingKit dependency
    - add `ReactNativeAudioPlayer.xcodeproj` to the Libraries folder in your XCode project
    - add `Pods/Pods.xcodeproj` to the Libraries folder in your XCode project
@@ -46,12 +46,12 @@ In XCode, in the project navigator, select your project. Add `libReactNativeAudi
   - Add `new ReactNativeAudioPlayerPackage(MainActivity.class)` to he list returned by the `getPackages()`method instead.
 2. Append the following lines to `android/settings.gradle`:
   	```
-  	include ':react-native-audio-player'
-  	project(':react-native-audio-player').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-audio-player/android')
+  	include ':react-native-ark-audio-player'
+  	project(':react-native-ark-audio-player').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-ark-audio-player/android')
   	```
 3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
   	```
-      compile project(':react-native-audio-player')
+      compile project(':react-native-ark-audio-player')
   	```
 
 ## Usage
@@ -67,7 +67,7 @@ In XCode, in the project navigator, select your project. Add `libReactNativeAudi
 ### Playing sound (similar code used by the player UI)
 
 ```javascript
-import { ReactNativeAudioPlayer } from 'react-native-audio-player';
+import { ReactNativeAudioPlayer } from 'react-native-ark-audio-player';
 
 const url = "http://lacavewebradio.chickenkiller.com:8000/stream.mp3";
 ReactNativeAudioPlayer.pause();
@@ -81,7 +81,7 @@ For more information see the Example app.
 ### Player UI
 
 ```javascript
-import { Player } from 'react-native-audio-player';
+import { Player } from 'react-native-ark-audio-player';
 
 class PlayerUI extends Component {
   render() {
@@ -110,15 +110,15 @@ class PlayerUI extends Component {
 - Android version based on the work of @EstebanFuentealba https://github.com/EstebanFuentealba/react-native-android-audio-player-aac
 - iOS version based on the work of @jhabdas https://github.com/jhabdas/lumpen-radio
 
-See also the list of [contributors](https://github.com/tlenclos/react-native-audio-player/graphs/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/tlenclos/react-native-ark-audio-player/graphs/contributors) who participated in this project.
 
 ## Contribute
 
 Since symlink support is [still lacking](https://github.com/facebook/react-native/issues/637) on React Native, I use the [wml](https://github.com/wix/wml) cli tool created by the nice folks at wix.
 
-`wml add ~/react-native-audio-player ~/react-native-audio-player/Example/node_modules/react-native-audio-player`
+`wml add ~/react-native-ark-audio-player ~/react-native-ark-audio-player/Example/node_modules/react-native-ark-audio-player`
 
-## [Changelog](https://github.com/tlenclos/react-native-audio-player/blob/master/CHANGELOG.md)
+## [Changelog](https://github.com/tlenclos/react-native-ark-audio-player/blob/master/CHANGELOG.md)
 
 ## License
 

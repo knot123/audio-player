@@ -1,10 +1,10 @@
 {
-  "name": "react-native-audio-player",
+  "name": "react-native-ark-audio-player",
   "version": "1.0.0",
   "description": "React native audio streaming library for android and iOS",
   "repository": {
     "type": "git",
-    "url": "git@github.com:arauk/react-native-audio-player.git"
+    "url": "git@github.com:arauk/react-native-ark-audio-player.git"
   },
   "keywords": [
     "android",
