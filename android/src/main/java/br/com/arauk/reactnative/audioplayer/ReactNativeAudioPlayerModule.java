@@ -28,7 +28,7 @@ public class ReactNativeAudioPlayerModule extends ReactContextBaseJavaModule {
     private static final String STOPPED = "STOPPED";
 
     private ReactApplicationContext mReactApplicationContext;
-    private MediaPlayer mMediaPlayer;
+    private MediaPlayerStateWrapper mMediaPlayer;
 
     private int mDuration = 0;
     private int mProgress = 0;
@@ -38,7 +38,7 @@ public class ReactNativeAudioPlayerModule extends ReactContextBaseJavaModule {
         super(reactContext);
 
         this.mReactApplicationContext = reactContext;
-        this.mMediaPlayer = new MediaPlayer();
+        this.mMediaPlayer = new MediaPlayerStateWrapper();
     }
 
     private void sendEvent(String eventName, @Nullable WritableMap params) {
@@ -53,11 +53,11 @@ public class ReactNativeAudioPlayerModule extends ReactContextBaseJavaModule {
         }
     }
 
-    private MediaPlayer createMediaPlayer(Context context, Uri uri, MediaPlayer.OnPreparedListener onPreparedListener) {
+    private MediaPlayerStateWrapper createMediaPlayer(Context context, Uri uri, MediaPlayer.OnPreparedListener onPreparedListener) {
         this.mState = BUFFERING;
 
         try {
-            MediaPlayer mediaPlayer = new MediaPlayer();
+            MediaPlayerStateWrapper mediaPlayer = new MediaPlayerStateWrapper();
             mediaPlayer.setDataSource(context, uri);
             mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
             if (onPreparedListener != null) {
@@ -81,33 +81,35 @@ public class ReactNativeAudioPlayerModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void play(String streamingURL, ReadableMap options) {
-        Uri streamingURI = Uri.parse(streamingURL);
-        FFmpegMediaMetadataRetriever mediaMetadataRetriever = new FFmpegMediaMetadataRetriever();
-        mediaMetadataRetriever.setDataSource(streamingURL);
-
+    public void play(String streamingURL, ReadableMap options, Callback callback) {
         try {
+            Uri streamingURI = Uri.parse(streamingURL);
+
+            FFmpegMediaMetadataRetriever mediaMetadataRetriever = new FFmpegMediaMetadataRetriever();
+            mediaMetadataRetriever.setDataSource(streamingURL + "asd");
             this.mDuration = Integer.valueOf(mediaMetadataRetriever.extractMetadata(FFmpegMediaMetadataRetriever.METADATA_KEY_DURATION));
+            mediaMetadataRetriever.release();
+
+            this.stop();
+
+            this.mMediaPlayer = this.createMediaPlayer(this.mReactApplicationContext, streamingURI, new MediaPlayer.OnPreparedListener() {
+                @Override
+                public void onPrepared(MediaPlayer mediaPlayer) {
+                    ReactNativeAudioPlayerModule.this.resume();
+                }
+            });
+            this.mMediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                @Override
+                public void onCompletion(MediaPlayer mediaPlayer) {
+                    ReactNativeAudioPlayerModule.this.mState = COMPLETED;
+                }
+            });
+
+            callback.invoke("OK");
         } catch (Exception ex) {
             ex.printStackTrace();
+            callback.invoke("ERROR");
         }
-
-        mediaMetadataRetriever.release();
-
-        this.stop();
-
-        this.mMediaPlayer = this.createMediaPlayer(this.mReactApplicationContext, streamingURI, new MediaPlayer.OnPreparedListener() {
-            @Override
-            public void onPrepared(MediaPlayer mediaPlayer) {
-                ReactNativeAudioPlayerModule.this.resume();
-            }
-        });
-        this.mMediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-            @Override
-            public void onCompletion(MediaPlayer mediaPlayer) {
-                ReactNativeAudioPlayerModule.this.mState = COMPLETED;
-            }
-        });
     }
 
     @ReactMethod

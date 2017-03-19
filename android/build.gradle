@@ -7,12 +7,12 @@ android {
     defaultConfig {
         minSdkVersion 16
         targetSdkVersion 22
-        versionCode 100000
-        versionName "1.0.0"
+        versionCode 101000
+        versionName "1.1.0"
     }
 }
 
 dependencies {
-    compile "com.facebook.react:react-native:0.20.+"
+    compile 'com.facebook.react:react-native:+'
     compile "com.github.wseemann:FFmpegMediaMetadataRetriever:1.0.14"
 }
