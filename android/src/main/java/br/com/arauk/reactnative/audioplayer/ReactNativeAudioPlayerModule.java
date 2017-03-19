@@ -86,7 +86,7 @@ public class ReactNativeAudioPlayerModule extends ReactContextBaseJavaModule {
             Uri streamingURI = Uri.parse(streamingURL);
 
             FFmpegMediaMetadataRetriever mediaMetadataRetriever = new FFmpegMediaMetadataRetriever();
-            mediaMetadataRetriever.setDataSource(streamingURL + "asd");
+            mediaMetadataRetriever.setDataSource(streamingURL);
             this.mDuration = Integer.valueOf(mediaMetadataRetriever.extractMetadata(FFmpegMediaMetadataRetriever.METADATA_KEY_DURATION));
             mediaMetadataRetriever.release();
 
