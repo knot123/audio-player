@@ -87,6 +87,17 @@ public class MediaPlayerStateWrapper {
         } else throw new RuntimeException();
     }
 
+    public void setDataSource(Context context, Uri uri) throws IOException {
+        if (currentState == State.IDLE) {
+            try {
+                mPlayer.setDataSource(context, uri);
+                currentState = State.INITIALIZED;
+            } catch (IllegalArgumentException | IllegalStateException | IOException ex) {
+                ex.printStackTrace();
+            }
+        } else throw new RuntimeException();
+    }
+
     public void prepareAsync() {
         Log.d(tag, "prepareAsync()");
         if (EnumSet.of(State.INITIALIZED, State.STOPPED).contains(currentState)) {
@@ -196,10 +207,6 @@ public class MediaPlayerStateWrapper {
 
     public void setAudioStreamType(int streamMusic) {
         mPlayer.setAudioStreamType(streamMusic);
-    }
-
-    public void setDataSource(Context context, Uri uri) throws IOException {
-        mPlayer.setDataSource(context, uri);
     }
 
     public void setOnPreparedListener(final OnPreparedListener onPreparedListener) {
