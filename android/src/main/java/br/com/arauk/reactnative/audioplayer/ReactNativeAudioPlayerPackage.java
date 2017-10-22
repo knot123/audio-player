@@ -12,7 +12,6 @@ import java.util.List;
 
 @SuppressWarnings("unused")
 public class ReactNativeAudioPlayerPackage implements ReactPackage {
-    @Override
     public List<Class<? extends JavaScriptModule>> createJSModules() {
         return Collections.emptyList();
     }
