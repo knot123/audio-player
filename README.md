@@ -94,7 +94,7 @@ class PlayerUI extends Component {
 
 ## TODO
 
-- [ ] Allow to play local files
+- [X] Allow to play local files
 - [ ] Allow to specify custom style for the android notification (maybe a custom view ?)
 - [ ] Allow to specify custom styles for the player
 - [ ] Handle artwork of artist
