@@ -66,9 +66,10 @@ RCT_EXPORT_MODULE()
 
 #pragma mark - Pubic API
 
-RCT_EXPORT_METHOD(play:(NSString *) streamUrl options:(NSDictionary *)options)
+RCT_EXPORT_METHOD(play:(NSString *) streamUrl options:(NSDictionary *)options callback:(RCTResponseSenderBlock)callback)
 {
    if (!self.audioPlayer) {
+      callback(@[@"ERROR"]);
       return;
    }
 
@@ -97,6 +98,7 @@ RCT_EXPORT_METHOD(play:(NSString *) streamUrl options:(NSDictionary *)options)
    }
 
    [self setNowPlayingInfo:true];
+   callback(@[@"OK"]);
 }
 
 RCT_EXPORT_METHOD(seekToTime:(double) seconds)
