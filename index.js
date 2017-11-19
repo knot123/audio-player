@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import React, { Component } from 'react';
 import {
     NativeModules,
@@ -149,7 +150,7 @@ const styles = StyleSheet.create({
 });
 
 Player.propTypes = {
-    url: React.PropTypes.string.isRequired
+    url: PropTypes.string.isRequired
 };
 
 export { Player, ReactNativeAudioPlayer }
