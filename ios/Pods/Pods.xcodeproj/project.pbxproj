@@ -7,32 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		037A5D36FB4B5928FAC87D1EA579A257 /* STKAutoRecoveringHTTPDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = EB6E46BF5E568D736260D1A17C1718E0 /* STKAutoRecoveringHTTPDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		074B7DC57FC023099CF60B44FA4F3368 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7CEF886328CA78C490429E1B00F7122 /* SystemConfiguration.framework */; };
-		0CA303BB7D20FE0AD00358C6345B454C /* STKDataSourceWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D480870EA778FB11F04B980F8A6BDBD /* STKDataSourceWrapper.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		0CA3143C4EF437598B0DCFF38AC64D28 /* STKDataSourceWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = C088807C34C655BEF920AF803E1426B8 /* STKDataSourceWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		11FDFFC21FF637FB00872164 /* STKCoreFoundationDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FDFFB11FF637FA00872164 /* STKCoreFoundationDataSource.m */; };
+		11FDFFC31FF637FB00872164 /* STKAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FDFFB21FF637FA00872164 /* STKAudioPlayer.m */; };
+		11FDFFC41FF637FB00872164 /* NSMutableArray+STKAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FDFFB31FF637FA00872164 /* NSMutableArray+STKAudioPlayer.m */; };
+		11FDFFC51FF637FB00872164 /* STKDataSourceWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FDFFB51FF637FA00872164 /* STKDataSourceWrapper.m */; };
+		11FDFFC61FF637FB00872164 /* STKDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FDFFB71FF637FB00872164 /* STKDataSource.m */; };
+		11FDFFC71FF637FB00872164 /* STKAutoRecoveringHTTPDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FDFFBB1FF637FB00872164 /* STKAutoRecoveringHTTPDataSource.m */; };
+		11FDFFC81FF637FB00872164 /* STKLocalFileDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FDFFBC1FF637FB00872164 /* STKLocalFileDataSource.m */; };
+		11FDFFC91FF637FB00872164 /* STKQueueEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FDFFBE1FF637FB00872164 /* STKQueueEntry.m */; };
+		11FDFFCA1FF637FB00872164 /* STKHTTPDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 11FDFFBF1FF637FB00872164 /* STKHTTPDataSource.m */; };
 		1269CA02F97B205A1C84E4663BC01E2D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4961FDA37C5D3F3C7AACCB0A93FB73F4 /* CFNetwork.framework */; };
-		1567F7B3AEAFAFFB566271440833C9B6 /* NSMutableArray+STKAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9665E2659378F533AAED0C25EBFDE3 /* NSMutableArray+STKAudioPlayer.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		1DC8EDE3D8BBD7BA4D225BAFA950B7F4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E901389EA02ACC9AF6A580A51F072D3 /* Foundation.framework */; };
-		207D3CDFEC3634C0DBB0F110670BC3E3 /* STKDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 11763C021B1761AF10F7CA13CB8BB052 /* STKDataSource.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		240EF80392469004941ABE21975C74A3 /* STKCoreFoundationDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 91621EBA09E97039713F96A7BBC10A47 /* STKCoreFoundationDataSource.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		2D13523609EB40F440DB5656B80880FE /* STKQueueEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A0D7124765FA8419151543DEFA49E2 /* STKQueueEntry.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		3FA06C84540328D05FAF9CC63398FB03 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E901389EA02ACC9AF6A580A51F072D3 /* Foundation.framework */; };
 		4187BFCCC207E4CAFAA60D3E16526E48 /* StreamingKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE553C08A5A4C10FFF3941C82D730CB /* StreamingKit-dummy.m */; };
-		467F7E09734D589E1AC46629A60B5983 /* STKLocalFileDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E04A82CF68EC169EC0669FFAD1B427E /* STKLocalFileDataSource.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		5DA3798D7D49C1D8383D9AD31941357C /* STKDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C3989523AF1F86FFB40DCE953FD6EB2 /* STKDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6BEE7A91A5877B311D9A20FF081A0307 /* STKQueueEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = 7462A1565CCD7C88146D4D8C7EF6D4F4 /* STKQueueEntry.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6C70D10B22E2666AD731F9A494673563 /* STKHTTPDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 728B2384F0E66466E38F737002C1A62B /* STKHTTPDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		810C100F0347BD929D6592AA07327E85 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B3F2BAF355C430FB1ADDFF2DC7B26E3 /* AudioToolbox.framework */; };
-		8271A47EFCADC89C0A1B5C8616124DEA /* STKAutoRecoveringHTTPDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF8C05345E5055C917166FC6F4F69AF /* STKAutoRecoveringHTTPDataSource.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		8BD1152E81B6FB84B5BB0E8F749992DD /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD2EE02C82F0738B46F0B5D88DCC4714 /* CoreFoundation.framework */; };
-		9BF478D9DA4B802909BB84B41A4E1F01 /* STKLocalFileDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FF11063AF72909AB74B517B9627C641 /* STKLocalFileDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AFBCC4B92B7CDEF10BEF600EB672CA66 /* NSMutableArray+STKAudioPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 07E76151F2E0078308EBB02A4482A89F /* NSMutableArray+STKAudioPlayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B9323437D25EBA3E212AD70CCA6EE1D4 /* STKAudioPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FC1F9C983CFB36C8906CC65DF667F66 /* STKAudioPlayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BF8ADD317654E81F9F4C7B01562B5243 /* STKHTTPDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E90A69DB95D7FC25D1112FD07401CF58 /* STKHTTPDataSource.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		DE0B591CD1C6A47CF18E969FEC130D24 /* STKCoreFoundationDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 50B2FA99CF927A1704C710DDE3555E57 /* STKCoreFoundationDataSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E25E22528F56ED171C9451EBAC08CE5C /* Pods-ReactNativeAudioPlayer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD31F0D189F0F4AB56C0EB4C6A1C4A7 /* Pods-ReactNativeAudioPlayer-dummy.m */; };
-		E61A084F3ED585CD07B87DD4A170199C /* STKAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = CCD0ADDC21D9E5BD0E8FE28B8626B88E /* STKAudioPlayer.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,42 +37,42 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		07E76151F2E0078308EBB02A4482A89F /* NSMutableArray+STKAudioPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+STKAudioPlayer.h"; path = "StreamingKit/StreamingKit/NSMutableArray+STKAudioPlayer.h"; sourceTree = "<group>"; };
-		11763C021B1761AF10F7CA13CB8BB052 /* STKDataSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STKDataSource.m; path = StreamingKit/StreamingKit/STKDataSource.m; sourceTree = "<group>"; };
-		3C3989523AF1F86FFB40DCE953FD6EB2 /* STKDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STKDataSource.h; path = StreamingKit/StreamingKit/STKDataSource.h; sourceTree = "<group>"; };
+		11FDFFB01FF637FA00872164 /* STKAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKAudioPlayer.h; sourceTree = "<group>"; };
+		11FDFFB11FF637FA00872164 /* STKCoreFoundationDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STKCoreFoundationDataSource.m; sourceTree = "<group>"; };
+		11FDFFB21FF637FA00872164 /* STKAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STKAudioPlayer.m; sourceTree = "<group>"; };
+		11FDFFB31FF637FA00872164 /* NSMutableArray+STKAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+STKAudioPlayer.m"; sourceTree = "<group>"; };
+		11FDFFB41FF637FA00872164 /* STKDataSourceWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKDataSourceWrapper.h; sourceTree = "<group>"; };
+		11FDFFB51FF637FA00872164 /* STKDataSourceWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STKDataSourceWrapper.m; sourceTree = "<group>"; };
+		11FDFFB61FF637FB00872164 /* NSMutableArray+STKAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+STKAudioPlayer.h"; sourceTree = "<group>"; };
+		11FDFFB71FF637FB00872164 /* STKDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STKDataSource.m; sourceTree = "<group>"; };
+		11FDFFB81FF637FB00872164 /* STKDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKDataSource.h; sourceTree = "<group>"; };
+		11FDFFB91FF637FB00872164 /* STKAutoRecoveringHTTPDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKAutoRecoveringHTTPDataSource.h; sourceTree = "<group>"; };
+		11FDFFBA1FF637FB00872164 /* STKCoreFoundationDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKCoreFoundationDataSource.h; sourceTree = "<group>"; };
+		11FDFFBB1FF637FB00872164 /* STKAutoRecoveringHTTPDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STKAutoRecoveringHTTPDataSource.m; sourceTree = "<group>"; };
+		11FDFFBC1FF637FB00872164 /* STKLocalFileDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STKLocalFileDataSource.m; sourceTree = "<group>"; };
+		11FDFFBD1FF637FB00872164 /* STKQueueEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKQueueEntry.h; sourceTree = "<group>"; };
+		11FDFFBE1FF637FB00872164 /* STKQueueEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STKQueueEntry.m; sourceTree = "<group>"; };
+		11FDFFBF1FF637FB00872164 /* STKHTTPDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STKHTTPDataSource.m; sourceTree = "<group>"; };
+		11FDFFC01FF637FB00872164 /* STKHTTPDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKHTTPDataSource.h; sourceTree = "<group>"; };
+		11FDFFC11FF637FB00872164 /* STKLocalFileDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKLocalFileDataSource.h; sourceTree = "<group>"; };
 		3D796608261BE7EF75B9CA099BE45490 /* libPods-ReactNativeAudioPlayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactNativeAudioPlayer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46D880ED2E04B6AB9250C94B14968EA5 /* Pods-ReactNativeAudioPlayer-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ReactNativeAudioPlayer-acknowledgements.markdown"; sourceTree = "<group>"; };
 		4961FDA37C5D3F3C7AACCB0A93FB73F4 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
-		4F9665E2659378F533AAED0C25EBFDE3 /* NSMutableArray+STKAudioPlayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+STKAudioPlayer.m"; path = "StreamingKit/StreamingKit/NSMutableArray+STKAudioPlayer.m"; sourceTree = "<group>"; };
-		50B2FA99CF927A1704C710DDE3555E57 /* STKCoreFoundationDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STKCoreFoundationDataSource.h; path = StreamingKit/StreamingKit/STKCoreFoundationDataSource.h; sourceTree = "<group>"; };
 		5627268B481575ACF7FA7E700A4C5215 /* Pods-ReactNativeAudioPlayer-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ReactNativeAudioPlayer-acknowledgements.plist"; sourceTree = "<group>"; };
 		5AD95BEC36B0B409A22F07A92F507575 /* Pods-ReactNativeAudioPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ReactNativeAudioPlayer.debug.xcconfig"; sourceTree = "<group>"; };
-		5D480870EA778FB11F04B980F8A6BDBD /* STKDataSourceWrapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STKDataSourceWrapper.m; path = StreamingKit/StreamingKit/STKDataSourceWrapper.m; sourceTree = "<group>"; };
-		5E04A82CF68EC169EC0669FFAD1B427E /* STKLocalFileDataSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STKLocalFileDataSource.m; path = StreamingKit/StreamingKit/STKLocalFileDataSource.m; sourceTree = "<group>"; };
 		5E901389EA02ACC9AF6A580A51F072D3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		6FC1F9C983CFB36C8906CC65DF667F66 /* STKAudioPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STKAudioPlayer.h; path = StreamingKit/StreamingKit/STKAudioPlayer.h; sourceTree = "<group>"; };
-		6FF11063AF72909AB74B517B9627C641 /* STKLocalFileDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STKLocalFileDataSource.h; path = StreamingKit/StreamingKit/STKLocalFileDataSource.h; sourceTree = "<group>"; };
-		728B2384F0E66466E38F737002C1A62B /* STKHTTPDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STKHTTPDataSource.h; path = StreamingKit/StreamingKit/STKHTTPDataSource.h; sourceTree = "<group>"; };
-		7462A1565CCD7C88146D4D8C7EF6D4F4 /* STKQueueEntry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STKQueueEntry.h; path = StreamingKit/StreamingKit/STKQueueEntry.h; sourceTree = "<group>"; };
 		7FD31F0D189F0F4AB56C0EB4C6A1C4A7 /* Pods-ReactNativeAudioPlayer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ReactNativeAudioPlayer-dummy.m"; sourceTree = "<group>"; };
 		82685176E4A8D99428DD96E7E1BC2ABE /* Pods-ReactNativeAudioPlayer-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ReactNativeAudioPlayer-frameworks.sh"; sourceTree = "<group>"; };
 		8354B6B10F10687EE626DF43663B075A /* libStreamingKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libStreamingKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		88A0D7124765FA8419151543DEFA49E2 /* STKQueueEntry.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STKQueueEntry.m; path = StreamingKit/StreamingKit/STKQueueEntry.m; sourceTree = "<group>"; };
-		91621EBA09E97039713F96A7BBC10A47 /* STKCoreFoundationDataSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STKCoreFoundationDataSource.m; path = StreamingKit/StreamingKit/STKCoreFoundationDataSource.m; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9B3F2BAF355C430FB1ADDFF2DC7B26E3 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
 		AD2EE02C82F0738B46F0B5D88DCC4714 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreFoundation.framework; sourceTree = DEVELOPER_DIR; };
 		AFE553C08A5A4C10FFF3941C82D730CB /* StreamingKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "StreamingKit-dummy.m"; sourceTree = "<group>"; };
-		C088807C34C655BEF920AF803E1426B8 /* STKDataSourceWrapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STKDataSourceWrapper.h; path = StreamingKit/StreamingKit/STKDataSourceWrapper.h; sourceTree = "<group>"; };
 		C903EE19B9DBEF92A8298FEDE81387F9 /* Pods-ReactNativeAudioPlayer-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ReactNativeAudioPlayer-resources.sh"; sourceTree = "<group>"; };
-		CCD0ADDC21D9E5BD0E8FE28B8626B88E /* STKAudioPlayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STKAudioPlayer.m; path = StreamingKit/StreamingKit/STKAudioPlayer.m; sourceTree = "<group>"; };
 		D680C21100D052BF718E97DCD897051F /* StreamingKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = StreamingKit.xcconfig; sourceTree = "<group>"; };
-		DEF8C05345E5055C917166FC6F4F69AF /* STKAutoRecoveringHTTPDataSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STKAutoRecoveringHTTPDataSource.m; path = StreamingKit/StreamingKit/STKAutoRecoveringHTTPDataSource.m; sourceTree = "<group>"; };
 		E40A270EC29E6C12D9917D7DA87C28A9 /* Pods-ReactNativeAudioPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ReactNativeAudioPlayer.release.xcconfig"; sourceTree = "<group>"; };
 		E4F28301A7F9CFC2A2B872F5C146AAF4 /* StreamingKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "StreamingKit-prefix.pch"; sourceTree = "<group>"; };
 		E7CEF886328CA78C490429E1B00F7122 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
-		E90A69DB95D7FC25D1112FD07401CF58 /* STKHTTPDataSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STKHTTPDataSource.m; path = StreamingKit/StreamingKit/STKHTTPDataSource.m; sourceTree = "<group>"; };
-		EB6E46BF5E568D736260D1A17C1718E0 /* STKAutoRecoveringHTTPDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STKAutoRecoveringHTTPDataSource.h; path = StreamingKit/StreamingKit/STKAutoRecoveringHTTPDataSource.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,24 +102,24 @@
 		003241FF73248B6E4FCB13D1A9878AC0 /* StreamingKit */ = {
 			isa = PBXGroup;
 			children = (
-				07E76151F2E0078308EBB02A4482A89F /* NSMutableArray+STKAudioPlayer.h */,
-				4F9665E2659378F533AAED0C25EBFDE3 /* NSMutableArray+STKAudioPlayer.m */,
-				6FC1F9C983CFB36C8906CC65DF667F66 /* STKAudioPlayer.h */,
-				CCD0ADDC21D9E5BD0E8FE28B8626B88E /* STKAudioPlayer.m */,
-				EB6E46BF5E568D736260D1A17C1718E0 /* STKAutoRecoveringHTTPDataSource.h */,
-				DEF8C05345E5055C917166FC6F4F69AF /* STKAutoRecoveringHTTPDataSource.m */,
-				50B2FA99CF927A1704C710DDE3555E57 /* STKCoreFoundationDataSource.h */,
-				91621EBA09E97039713F96A7BBC10A47 /* STKCoreFoundationDataSource.m */,
-				3C3989523AF1F86FFB40DCE953FD6EB2 /* STKDataSource.h */,
-				11763C021B1761AF10F7CA13CB8BB052 /* STKDataSource.m */,
-				C088807C34C655BEF920AF803E1426B8 /* STKDataSourceWrapper.h */,
-				5D480870EA778FB11F04B980F8A6BDBD /* STKDataSourceWrapper.m */,
-				728B2384F0E66466E38F737002C1A62B /* STKHTTPDataSource.h */,
-				E90A69DB95D7FC25D1112FD07401CF58 /* STKHTTPDataSource.m */,
-				6FF11063AF72909AB74B517B9627C641 /* STKLocalFileDataSource.h */,
-				5E04A82CF68EC169EC0669FFAD1B427E /* STKLocalFileDataSource.m */,
-				7462A1565CCD7C88146D4D8C7EF6D4F4 /* STKQueueEntry.h */,
-				88A0D7124765FA8419151543DEFA49E2 /* STKQueueEntry.m */,
+				11FDFFB61FF637FB00872164 /* NSMutableArray+STKAudioPlayer.h */,
+				11FDFFB31FF637FA00872164 /* NSMutableArray+STKAudioPlayer.m */,
+				11FDFFB01FF637FA00872164 /* STKAudioPlayer.h */,
+				11FDFFB21FF637FA00872164 /* STKAudioPlayer.m */,
+				11FDFFB91FF637FB00872164 /* STKAutoRecoveringHTTPDataSource.h */,
+				11FDFFBB1FF637FB00872164 /* STKAutoRecoveringHTTPDataSource.m */,
+				11FDFFBA1FF637FB00872164 /* STKCoreFoundationDataSource.h */,
+				11FDFFB11FF637FA00872164 /* STKCoreFoundationDataSource.m */,
+				11FDFFB81FF637FB00872164 /* STKDataSource.h */,
+				11FDFFB71FF637FB00872164 /* STKDataSource.m */,
+				11FDFFB41FF637FA00872164 /* STKDataSourceWrapper.h */,
+				11FDFFB51FF637FA00872164 /* STKDataSourceWrapper.m */,
+				11FDFFC01FF637FB00872164 /* STKHTTPDataSource.h */,
+				11FDFFBF1FF637FB00872164 /* STKHTTPDataSource.m */,
+				11FDFFC11FF637FB00872164 /* STKLocalFileDataSource.h */,
+				11FDFFBC1FF637FB00872164 /* STKLocalFileDataSource.m */,
+				11FDFFBD1FF637FB00872164 /* STKQueueEntry.h */,
+				11FDFFBE1FF637FB00872164 /* STKQueueEntry.m */,
 				A699C9F0FC17D324B90D5E5566BF132B /* Support Files */,
 			);
 			path = StreamingKit;
@@ -223,15 +214,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFBCC4B92B7CDEF10BEF600EB672CA66 /* NSMutableArray+STKAudioPlayer.h in Headers */,
-				B9323437D25EBA3E212AD70CCA6EE1D4 /* STKAudioPlayer.h in Headers */,
-				037A5D36FB4B5928FAC87D1EA579A257 /* STKAutoRecoveringHTTPDataSource.h in Headers */,
-				DE0B591CD1C6A47CF18E969FEC130D24 /* STKCoreFoundationDataSource.h in Headers */,
-				5DA3798D7D49C1D8383D9AD31941357C /* STKDataSource.h in Headers */,
-				0CA3143C4EF437598B0DCFF38AC64D28 /* STKDataSourceWrapper.h in Headers */,
-				6C70D10B22E2666AD731F9A494673563 /* STKHTTPDataSource.h in Headers */,
-				9BF478D9DA4B802909BB84B41A4E1F01 /* STKLocalFileDataSource.h in Headers */,
-				6BEE7A91A5877B311D9A20FF081A0307 /* STKQueueEntry.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,15 +286,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1567F7B3AEAFAFFB566271440833C9B6 /* NSMutableArray+STKAudioPlayer.m in Sources */,
-				E61A084F3ED585CD07B87DD4A170199C /* STKAudioPlayer.m in Sources */,
-				8271A47EFCADC89C0A1B5C8616124DEA /* STKAutoRecoveringHTTPDataSource.m in Sources */,
-				240EF80392469004941ABE21975C74A3 /* STKCoreFoundationDataSource.m in Sources */,
-				207D3CDFEC3634C0DBB0F110670BC3E3 /* STKDataSource.m in Sources */,
-				0CA303BB7D20FE0AD00358C6345B454C /* STKDataSourceWrapper.m in Sources */,
-				BF8ADD317654E81F9F4C7B01562B5243 /* STKHTTPDataSource.m in Sources */,
-				467F7E09734D589E1AC46629A60B5983 /* STKLocalFileDataSource.m in Sources */,
-				2D13523609EB40F440DB5656B80880FE /* STKQueueEntry.m in Sources */,
 				4187BFCCC207E4CAFAA60D3E16526E48 /* StreamingKit-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,7 +294,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11FDFFC51FF637FB00872164 /* STKDataSourceWrapper.m in Sources */,
+				11FDFFC61FF637FB00872164 /* STKDataSource.m in Sources */,
+				11FDFFC41FF637FB00872164 /* NSMutableArray+STKAudioPlayer.m in Sources */,
+				11FDFFC81FF637FB00872164 /* STKLocalFileDataSource.m in Sources */,
 				E25E22528F56ED171C9451EBAC08CE5C /* Pods-ReactNativeAudioPlayer-dummy.m in Sources */,
+				11FDFFCA1FF637FB00872164 /* STKHTTPDataSource.m in Sources */,
+				11FDFFC31FF637FB00872164 /* STKAudioPlayer.m in Sources */,
+				11FDFFC71FF637FB00872164 /* STKAutoRecoveringHTTPDataSource.m in Sources */,
+				11FDFFC21FF637FB00872164 /* STKCoreFoundationDataSource.m in Sources */,
+				11FDFFC91FF637FB00872164 /* STKQueueEntry.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

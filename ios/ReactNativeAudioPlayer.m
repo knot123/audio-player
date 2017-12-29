@@ -13,6 +13,12 @@
 @synthesize bridge = _bridge;
 
 RCT_EXPORT_MODULE()
+
+- (NSArray<NSString *> *)supportedEvents
+{
+   return @[@"AudioBridgeEvent"];
+}
+
 - (dispatch_queue_t)methodQueue
 {
    return dispatch_get_main_queue();
@@ -45,13 +51,12 @@ RCT_EXPORT_MODULE()
       NSNumber *progress = [NSNumber numberWithFloat:self.audioPlayer.progress];
       NSNumber *duration = [NSNumber numberWithFloat:self.audioPlayer.duration];
       NSString *url = [NSString stringWithString:self.audioPlayer.currentlyPlayingQueueItemId];
-
-      [self.bridge.eventDispatcher sendDeviceEventWithName:@"AudioBridgeEvent" body:@{
-                                                                                 @"status": @"STREAMING",
-                                                                                 @"progress": progress,
-                                                                                 @"duration": duration,
-                                                                                 @"url": url,
-                                                                                 }];
+      [self sendEventWithName:@"AudioBridgeEvent" body:@{
+                                                         @"status": @"STREAMING",
+                                                         @"progress": progress,
+                                                         @"duration": duration,
+                                                         @"url": url,
+                                                         }];
    }
 }
 
@@ -212,18 +217,19 @@ RCT_EXPORT_METHOD(getStatus: (RCTResponseSenderBlock) callback)
 }
 
 - (void)audioPlayer:(STKAudioPlayer *)player unexpectedError:(STKAudioPlayerErrorCode)errorCode {
-   NSLog(@"AudioPlayer unexpected Error with code %d", errorCode);
+   NSLog(@"AudioPlayer unexpected Error with code %ld", (long)errorCode);
 }
 
 - (void)audioPlayer:(STKAudioPlayer *)audioPlayer didReadStreamMetadata:(NSDictionary *)dictionary {
    NSLog(@"AudioPlayer SONG NAME  %@", dictionary[@"StreamTitle"]);
 
    self.currentSong = dictionary[@"StreamTitle"];
-   [self.bridge.eventDispatcher sendDeviceEventWithName:@"AudioBridgeEvent" body:@{
-                                                                                   @"status": @"METADATA_UPDATED",
-                                                                                   @"key": @"StreamTitle",
-                                                                                   @"value": dictionary[@"StreamTitle"]
-                                                                                   }];
+   
+   [self sendEventWithName:@"AudioBridgeEvent" body:@{
+                                                      @"status": @"METADATA_UPDATED",
+                                                      @"key": @"StreamTitle",
+                                                      @"value": dictionary[@"StreamTitle"]
+                                                      }];
    [self setNowPlayingInfo:true];
 }
 
@@ -234,28 +240,24 @@ RCT_EXPORT_METHOD(getStatus: (RCTResponseSenderBlock) callback)
 
    switch (state) {
       case STKAudioPlayerStatePlaying:
-         [self.bridge.eventDispatcher sendDeviceEventWithName:@"AudioBridgeEvent"
-                                                         body:@{@"status": @"PLAYING", @"progress": progress, @"duration": duration, @"url": self.lastUrlString}];
+         [self sendEventWithName:@"AudioBridgeEvent" body:@{@"status": @"PLAYING", @"progress": progress, @"duration": duration, @"url": self.lastUrlString}];
          break;
 
       case STKAudioPlayerStatePaused:
-         [self.bridge.eventDispatcher sendDeviceEventWithName:@"AudioBridgeEvent"
-                                                         body:@{@"status": @"PAUSED", @"progress": progress, @"duration": duration, @"url": self.lastUrlString}];
+         [self sendEventWithName:@"AudioBridgeEvent" body:@{@"status": @"PAUSED", @"progress": progress, @"duration": duration, @"url": self.lastUrlString}];
+
          break;
 
       case STKAudioPlayerStateStopped:
-         [self.bridge.eventDispatcher sendDeviceEventWithName:@"AudioBridgeEvent"
-                                                         body:@{@"status": @"STOPPED", @"progress": progress, @"duration": duration, @"url": self.lastUrlString}];
+         [self sendEventWithName:@"AudioBridgeEvent" body:@{@"status": @"STOPPED", @"progress": progress, @"duration": duration, @"url": self.lastUrlString}];
          break;
 
       case STKAudioPlayerStateBuffering:
-         [self.bridge.eventDispatcher sendDeviceEventWithName:@"AudioBridgeEvent"
-                                                         body:@{@"status": @"BUFFERING"}];
+         [self sendEventWithName:@"AudioBridgeEvent" body:@{@"status": @"BUFFERING"}];
          break;
 
       case STKAudioPlayerStateError:
-         [self.bridge.eventDispatcher sendDeviceEventWithName:@"AudioBridgeEvent"
-                                                         body:@{@"status": @"ERROR"}];
+          [self sendEventWithName:@"AudioBridgeEvent" body:@{@"status": @"ERROR"}];
          break;
 
       default:
